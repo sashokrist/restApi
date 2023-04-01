@@ -89,5 +89,7 @@ class TestApiService
         if ($type === 'product') {
             DB::table('products')->insert($fields);
         }
+
+        return response()->json(['data' => $fields]);
     }
 }

@@ -5,6 +5,7 @@ namespace Tests\Feature;
 use App\Services\TestApiService;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
+use Illuminate\Support\Facades\DB;
 use PHPUnit\Framework\TestCase;
 
 class TestApiServiceTest extends TestCase

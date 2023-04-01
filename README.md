@@ -15,13 +15,16 @@ authenticate Postman - testApi.test/api/v1/authenticate - POST
 get random feed Postman - testApi.test/api/v1/getFeedInfo - GET
 
 
-Show Products and Orders from DB http://testapi.test/api/v1/showOrder 
+Show Orders from DB http://testapi.test/api/v1/showOrder , paginate(10)
 
 
-Show Products and Orders from DB http://testapi.test/api/v1/showProduct
+Show Products from DB http://testapi.test/api/v1/showProduct , paginate(10)
 
 </p>
 
+<p>Unit Test - /tests/Feature/TestApiServiceTest</p>
+
+Screenshots
 
 <img width="926" alt="Screenshot 2023-04-01 at 14 41 00" src="https://user-images.githubusercontent.com/11788009/229286647-bd6a2155-5622-4217-83a5-464e4ac82734.png">
 <img width="926" alt="Screenshot 2023-04-01 at 14 40 51" src="https://user-images.githubusercontent.com/11788009/229286697-b204ade1-ad1d-4a27-8ac7-8cbd53f4b2b5.png">
