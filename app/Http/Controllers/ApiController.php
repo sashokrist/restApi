@@ -18,18 +18,24 @@ class ApiController extends Controller
      * @return void
      * @throws GuzzleException
      */
-    public function authenticate(TestApiService $apiService)
-    {
-        $apiService->authenticate();
-    }
-
-    /**
-     * @param TestApiService $apiService
-     * @return void
-     * @throws GuzzleException
-     */
     public function getFeedInfo(TestApiService $apiService)
     {
         $apiService->get();
+    }
+
+    /**
+     * @return Application|Factory|View|\Illuminate\Foundation\Application
+     */
+    public function showProduct()
+    {
+        return view('products', ['products' => DB::table('products')->orderByDesc('id')->paginate(10)]);
+    }
+
+    /**
+     * @return Application|Factory|View|\Illuminate\Foundation\Application
+     */
+    public function showOrder()
+    {
+        return view('orders', ['orders' => DB::table('orders')->orderByDesc('id')->paginate(10)]);
     }
 }

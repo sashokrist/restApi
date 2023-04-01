@@ -59,11 +59,13 @@ class TestApiService
     /**
      * Method to retrieve a random test feed from the API and insert it into the appropriate table in the database
      *
-     * @return Application|Factory|View|\Illuminate\Foundation\Application|void
+     * @return \Illuminate\Http\JsonResponse
      * @throws GuzzleException
      */
     public function get()
     {
+        //authenticate
+        $this->authenticate();
         $client = new Client();
 
         // Send a GET request to the API's get-random-test-feed endpoint with the access token as an authorization header
@@ -74,33 +76,18 @@ class TestApiService
         ]);
 
         // Extract the feed type and fields from the response body
-        $data = $response->getBody()->getContents();
+        $data = json_decode($response->getBody()->getContents());
         //split string into an array based on a specified delimiter.
         $feedInfo = explode(':', $data);
         $type = $feedInfo[0];
         $fields = explode('||', $feedInfo[1]);
 
-        // Convert the fields into an array and insert into database table based on feed type
-        $feedData = [];
-        foreach ($fields as $field) {
-            $parts = explode('\\', $field);
-            $name = $parts[0];
-            // $encoding = isset($parts[1]) ? $parts[1] : null;
-            $encoding = $parts[1] ?? null;
-            $value = substr($parts[2], 1, -1);
-            $feedData[$name] = $value;
-        }
-
+        //insert to database
         if ($type === 'order') {
-            DB::table('orders')->insert($feedData);
-            $orders = DB::table('orders')->get();
-            return view('orders', ['orders' => $orders]);
+            DB::table('orders')->insert($fields);
         }
-
         if ($type === 'product') {
-            DB::table('products')->insert($feedData);
-            $products = DB::table('products')->get();
-            return view('products', ['products' => $products]);
+            DB::table('products')->insert($fields);
         }
     }
 }
