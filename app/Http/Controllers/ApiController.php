@@ -28,7 +28,9 @@ class ApiController extends Controller
      */
     public function showProduct()
     {
-        return view('products', ['products' => DB::table('products')->orderByDesc('id')->paginate(10)]);
+        return view('products', ['products' => DB::table('products')
+            ->orderByDesc('id')
+            ->paginate(10)]);
     }
 
     /**
@@ -36,6 +38,8 @@ class ApiController extends Controller
      */
     public function showOrder()
     {
-        return view('orders', ['orders' => DB::table('orders')->orderByDesc('id')->paginate(10)]);
+        return view('orders', ['orders' => DB::table('orders')
+            ->orderByDesc('id')
+            ->paginate(10)]);
     }
 }

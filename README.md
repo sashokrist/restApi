@@ -15,10 +15,10 @@ authenticate Postman - testApi.test/api/v1/authenticate - POST
 get random feed Postman - testApi.test/api/v1/getFeedInfo - GET
 
 
-Show Orders from DB http://testapi.test/api/v1/showOrder , paginate(10)
+Show Orders from DB http://testapi.test/api/v1/showOrder , orderByDesc('id), paginate(10)
 
 
-Show Products from DB http://testapi.test/api/v1/showProduct , paginate(10)
+Show Products from DB http://testapi.test/api/v1/showProduct , orderByDesc('id), paginate(10)
 
 </p>
 
