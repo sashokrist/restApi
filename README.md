@@ -24,6 +24,8 @@ Show Products from DB http://testapi.test/api/v1/showProduct , orderByDesc('id),
 
 <p>Unit Test - /tests/Feature/TestApiServiceTest</p>
 
+<p>Database - /database/testApi.sql</p>
+
 Screenshots
 
 <img width="926" alt="Screenshot 2023-04-01 at 14 41 00" src="https://user-images.githubusercontent.com/11788009/229286647-bd6a2155-5622-4217-83a5-464e4ac82734.png">
