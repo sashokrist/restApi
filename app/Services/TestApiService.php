@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use App\Http\Resources\OrderResource;
 use App\Models\Order;
 use App\Models\Product;
 use GuzzleHttp\Client;
@@ -42,7 +43,7 @@ class TestApiService
     }
 
     /**
-     * @return void
+     * @return OrderResource
      * @throws GuzzleException
      */
     public function get()

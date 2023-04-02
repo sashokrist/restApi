@@ -18,16 +18,12 @@ authenticate Postman - testApi.test/api/v1/authenticate - POST
 get random feed Postman - testApi.test/api/v1/getFeedInfo - GET
 
 
-Show Random Order from DB http://testapi.test/api/v1/showOrder
-
-
-Show Random Product from DB http://testapi.test/api/v1/showProduct 
+Show Random Feeds from DB http://testapi.test/api/v1/showFeeds - GET
 
 </p>
 
 <p>Unit Test - /tests/Feature/TestApiServiceTest</p>
 
 Screenshots
-![Screenshot 2023-04-02 at 12.23.26.png](..%2FScreenshot%202023-04-02%20at%2012.23.26.png)
 
-![Screenshot 2023-04-02 at 12.23.47.png](..%2FScreenshot%202023-04-02%20at%2012.23.47.png)
+![Screenshot 2023-04-03 at 2.23.33.png](..%2FScreenshot%202023-04-03%20at%202.23.33.png)
