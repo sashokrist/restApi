@@ -26,20 +26,14 @@ authenticate Postman: http://locahost:8000/api/v1/authenticate - POST
 get random feed Postman: http://locahost:8000/api/v1/getFeedInfo - GET
 
 
-Show Random Order from DB in browser: http://locahost:8000/api/v1/showOrder - GET
-
-
-Show Random Product from DB in browser: http://locahost:8000/api/v1/showProduct  - GET
-Show Random Feeds from DB http://testapi.test/api/v1/showFeeds - GET
+Show Random Feeds from DB on browser http://testapi.test/api/v1/showFeeds
 
 </p>
 
 <p>Unit Test - /tests/Feature/TestApiServiceTest</p>
 
 Screenshots
-<img width="926" alt="Screenshot 2023-04-02 at 12 23 26" src="https://user-images.githubusercontent.com/11788009/229349210-ee9c7806-e585-4876-8f08-38b3a895b13b.png">
 
-<img width="926" alt="Screenshot 2023-04-02 at 12 23 47" src="https://user-images.githubusercontent.com/11788009/229349215-c5c9c448-7083-41d9-9e4b-982792747113.png">
+<img width="926" alt="Screenshot 2023-04-03 at 2 23 33" src="https://user-images.githubusercontent.com/11788009/229385389-ad886149-4e91-4b0c-91b1-6523c945b6dd.png">
 
 
-![Screenshot 2023-04-03 at 2.23.33.png](..%2FScreenshot%202023-04-03%20at%202.23.33.png)
