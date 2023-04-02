@@ -3,12 +3,20 @@
 <h1>Test Api Task</h1>
 
 <h3>How to run</h3>
+
 1. git clone git@github.com:sashokrist/restApi.git
+
 2. composer install
+
 3. cp .env.example .env
+
 4. php artisan key:generate
-5. Set database credentials
+
+5. Set database credentials in .env
+
 6. php artisan migrate
+
+7. php artisan serve
 
 <p>Routes:
 
