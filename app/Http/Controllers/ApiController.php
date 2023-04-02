@@ -10,6 +10,7 @@ use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use GuzzleHttp\Client;
+use Illuminate\Support\Facades\Session;
 
 class ApiController extends Controller
 {
@@ -22,24 +23,22 @@ class ApiController extends Controller
     {
         $apiService->get();
     }
-
-    /**
-     * @return Application|Factory|View|\Illuminate\Foundation\Application
-     */
     public function showProduct()
     {
-        return view('products', ['products' => DB::table('products')
-            ->orderByDesc('id')
-            ->paginate(10)]);
+        return view('products', ['products' => DB::table('products')->get()]);
     }
-
-    /**
-     * @return Application|Factory|View|\Illuminate\Foundation\Application
-     */
     public function showOrder()
     {
-        return view('orders', ['orders' => DB::table('orders')
-            ->orderByDesc('id')
-            ->paginate(10)]);
+        return view('orders', ['orders' => DB::table('orders')->get()]);
     }
+
+    public function getRandomFeed(Request $request, TestApiService $apiService)
+    {
+        $apiService->get();
+
+        Session::flash('success', 'New random feed was generated.');
+
+        return redirect()->back();
+    }
+
 }

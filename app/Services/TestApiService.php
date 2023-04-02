@@ -2,6 +2,8 @@
 
 namespace App\Services;
 
+use App\Models\Order;
+use App\Models\Product;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 use Illuminate\Support\Facades\DB;
@@ -26,7 +28,7 @@ class TestApiService
      * @return string
      * @throws GuzzleException
      */
-    private function authenticate(): string
+    public function authenticate(): string
     {
         $client = new Client();
         $response = $client->post("$this->apiUrl/access-token", [
@@ -40,9 +42,7 @@ class TestApiService
     }
 
     /**
-     * Retrieves a random test feed from the API and inserts it into the appropriate table in the database
-     *
-     * @return \Illuminate\Http\JsonResponse
+     * @return void
      * @throws GuzzleException
      */
     public function get()
@@ -60,11 +60,9 @@ class TestApiService
         $fields = explode('||', $fields);
 
         if ($type === 'order') {
-            DB::table('orders')->insert($fields);
+            Order::updateOrCreate(['type' => $type], ['data' => json_encode($fields)]);
         } elseif ($type === 'product') {
-            DB::table('products')->insert($fields);
+            Product::updateOrCreate(['type' => $type], ['data' => json_encode($fields)]);
         }
-
-        return response()->json(['data' => $fields]);
     }
 }

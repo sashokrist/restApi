@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ApiController;
+use App\Services\TestApiService;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,9 +20,10 @@ Route::get('/', function () {
 });
 
 //authenticate
-Route::post('/api/v1/authenticate', [\App\Services\TestApiService::class, 'authenticate']);
+Route::post('/api/v1/authenticate', [TestApiService::class, 'authenticate']);
 //get random feed
-Route::get('/api/v1/getFeedInfo', [ApiController::class, 'getFeedInfo']);
+Route::get('/api/v1/getFeedInfo', [ApiController::class, 'getFeedInfo'])->name('/api/v1/getFeedInfo');
+Route::get('/api/v1/getRandomFeed', [ApiController::class, 'getRandomFeed'])->name('/api/v1/getRandomFeed');
 Route::get('/api/v1/showProduct', [ApiController::class, 'showProduct'])->name('/api/v1/showProduct');
 Route::get('/api/v1/showOrder', [ApiController::class, 'showOrder'])->name('/api/v1/showOrder');
 
