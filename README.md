@@ -12,16 +12,16 @@
 
 <p>Routes:
 
-authenticate Postman - testApi.test/api/v1/authenticate - POST
+authenticate Postman -  http://locahost:8000/api/v1/authenticate - POST
 
 
-get random feed Postman - testApi.test/api/v1/getFeedInfo - GET
+get random feed Postman -  http://locahost:8000/api/v1/getFeedInfo - GET
 
 
-Show Random Order from DB http://testapi.test/api/v1/showOrder
+Show Random Order from DB http://locahost:8000/api/v1/showOrder
 
 
-Show Random Product from DB http://testapi.test/api/v1/showProduct 
+Show Random Product from DB http://locahost:8000/api/v1/showProduct 
 
 </p>
 
