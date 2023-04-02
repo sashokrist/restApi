@@ -36,6 +36,8 @@ Show Random Product from DB in browser: http://locahost:8000/api/v1/showProduct 
 <p>Unit Test - /tests/Feature/TestApiServiceTest</p>
 
 Screenshots
-![Screenshot 2023-04-02 at 12.23.26.png](..%2FScreenshot%202023-04-02%20at%2012.23.26.png)
+<img width="926" alt="Screenshot 2023-04-02 at 12 23 26" src="https://user-images.githubusercontent.com/11788009/229349210-ee9c7806-e585-4876-8f08-38b3a895b13b.png">
 
-![Screenshot 2023-04-02 at 12.23.47.png](..%2FScreenshot%202023-04-02%20at%2012.23.47.png)
+<img width="926" alt="Screenshot 2023-04-02 at 12 23 47" src="https://user-images.githubusercontent.com/11788009/229349215-c5c9c448-7083-41d9-9e4b-982792747113.png">
+
+
